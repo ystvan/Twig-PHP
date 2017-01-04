@@ -5,9 +5,18 @@
     <title>Car dealership</title>
 </head>
 <body>
-<form action="control/ShowCars.php" method="get">
-    <h2>Click here to show all cars </h2>
-<input type="submit" value="Go & show it to me!">
+<form action="control/ShowCars.php" method="GET"><br>
+    <h2>Click here to show all cars </h2><br>
+<input type="submit" value="Go & show it to me!"><br>
+    <br>
+</form>
+
+<form action="control/createCar.php" method="POST">
+    Make <input type="text" name="model"><br>
+    Year <input type="text" name="year"><br>
+    Price <input type="text" name="price"><br>
+    <br>
+    <input type="submit" value="Go & deploy"><br>
 </form>
 
 </body>

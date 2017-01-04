@@ -9,9 +9,16 @@ $twig = new Twig_Environment($loader, array('auto_reload' => true));
 
 $template = $twig -> loadTemplate('showAll.html.twig');
 
+//Creating the SoapClient instance
+
 $URI = 'http://demosoap.azurewebsites.net/ServiceCarSOAP.svc?wsdl';
 $SOAP = new SoapClient($URI);
+
+//print_r($SOAP ->__getFunctions());
+
+//Call wsdl function
 $results = $SOAP -> GetAllCars();
+
 
 //print_r($SOAP);
 
