@@ -25,9 +25,14 @@ $params = array('newCar' =>$car);
 //Call wsdl function
 $res = $SOAP -> AddCar($params);
 
-print_r($res);
+//print_r($res);
+$results = $SOAP -> GetAllCars();
 
-$twigContent = array("cars" => $res -> AddCarResult -> Car);
-print_r($twigContent);
+
+//print_r($SOAP);
+
+$twigContent = array("cars" => $results -> GetAllCarsResult -> Car);
+//$twigContent = array("cars" => $res -> AddCarResult -> Car);
+//print_r($twigContent);
 
 echo $template -> render($twigContent);

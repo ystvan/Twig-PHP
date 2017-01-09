@@ -14,7 +14,7 @@ $template = $twig -> loadTemplate('showAll.html.twig');
 $URI = 'http://demosoap.azurewebsites.net/ServiceCarSOAP.svc?wsdl';
 $SOAP = new SoapClient($URI);
 
-print_r($SOAP ->__getFunctions());
+//print_r($SOAP ->__getFunctions());
 
 //Call wsdl function
 $results = $SOAP -> GetAllCars();
