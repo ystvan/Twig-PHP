@@ -19,13 +19,13 @@ $car->Price = $_POST['price'];
 $URI = 'http://demosoap.azurewebsites.net/ServiceCarSOAP.svc?wsdl';
 $SOAP = new SoapClient($URI);
 
-$params = array('car' =>$car);
+$params = array('newCar' =>$car);
 //print_r($params);
 
 //Call wsdl function
 $res = $SOAP -> AddCar($params);
 
-//print_r($res);
+print_r($res);
 
 $twigContent = array("cars" => $res -> AddCarResult -> Car);
 print_r($twigContent);
